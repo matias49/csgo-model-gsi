@@ -1,0 +1,21 @@
+{
+  "name": "csgo-gsi-model",
+  "version": "1.0.0",
+  "description": "A CSGO Game State Integration (GSI) module with custom functions to use with game data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "csgo",
+    "gsi",
+    "game-state-integration",
+    "csgo-gsi",
+    "steam"
+  ],
+  "dependencies": {
+    "request": "^2.70.0"
+  },
+  "author": "Matias49",
+  "license": "MIT"
+}
