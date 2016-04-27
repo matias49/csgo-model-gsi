@@ -288,7 +288,3 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
-
-# Node Visual Studio
-*.njsproj
-*.sln
