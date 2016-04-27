@@ -1,6 +1,6 @@
 {
   "name": "csgo-gsi-model",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "A CSGO Game State Integration (GSI) module with custom functions to use with game data",
   "main": "index.js",
   "scripts": {

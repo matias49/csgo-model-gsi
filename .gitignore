@@ -291,3 +291,4 @@ paket-files/
 
 # Node Visual Studio
 *.njsproj
+*.sln
