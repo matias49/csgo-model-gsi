@@ -364,6 +364,7 @@ CsgoData.prototype.IsPlaying = function () {
  * Get the players images by the steam api
  * We call the steam API only if the pictures were never get.
  * We use a promise here to be async
+ * We have to pass the new data as parameter, since "this" can't be called inside a native Promise
  * @param  {JSON} newData The n data of the game
  * @param  {JSON}} oldData The n-1 data of the game
  * @return {JSON}         All the n data plus the pictures of the players
@@ -400,7 +401,7 @@ CsgoData.prototype.getPlayerImages = function (newData, oldData) {
       // We call the API via request
       // Default request template
       console.log('callAPI');
-      request('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' + this.steamApiKey + '&steamids=' + playersIdString + '&format=json', function (error, response, body) {
+      request('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' + newData.steamApiKey + '&steamids=' + playersIdString + '&format=json', function (error, response, body) {
         var steamResponse = JSON.parse(body);
         //Check for error
         if (error) {
@@ -464,7 +465,7 @@ CsgoData.prototype.getScreenPlayerImage = function (newData, oldData) {
       // We call the API via request
       // Default request template
       console.log('callAPI');
-      request('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' + this.steamApiKey + '&steamids=' + playerId + '&format=json', function (error, response, body) {
+      request('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' + newData.steamApiKey + '&steamids=' + playerId + '&format=json', function (error, response, body) {
         var steamResponse = JSON.parse(body);
         //Check for error
         if (error) {
