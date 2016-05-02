@@ -1,6 +1,6 @@
 {
   "name": "csgo-gsi-model",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A CSGO Game State Integration (GSI) module with custom functions to use with game data",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,10 @@
   ],
   "dependencies": {
     "request": "^2.70.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matias49/csgo-model-gsi.git"
   },
   "author": "Matias49",
   "license": "MIT"
