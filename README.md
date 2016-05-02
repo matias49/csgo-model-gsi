@@ -18,11 +18,12 @@ Also providing functions to manage the data.
 * The raw body data sent from the GSI API
 * (optional) Your Steam API key which can be found here : http://steamcommunity.com/dev/apikey
 
-**To use comparaison functions, it's advisable to store the last data on another variable
+**To use comparaison functions, it's advisable to store the last data on another variable**
 
 ### Example :
 
 ```javascript
+var csgoModel = require('csgo-gsi-model');
 router.post('/', function(req, res) {
     csgo = new csgoModel(req.body, 'STEAM_API_KEY');
     // The data is set up
@@ -59,6 +60,7 @@ csgo.functionName
 `isAlive(player)` - Used to check if the player given is alive (check if his health > 0).
 
 `getTeamPlayersAlive(teamSide)` - Used to get the number of alive players on the side given.
+
 **teamSide : 'T' or 'CT'**
 
 `IsPlayersChanged(oldCsgoData)` - Used to check if the players are still the same between the two data.
